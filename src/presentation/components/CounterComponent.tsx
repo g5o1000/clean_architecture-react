@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useCounter } from "../contexts/CounterContext";
+import { useServices } from "../contexts/ServiceContext";
 
 const CounterComponent: React.FC = () => {
-    const counterService = useCounter();
+    const { counterService } = useServices();
     const [counter, setCounter] = useState<number>(counterService.getCounterValue());
 
     useEffect(() => {

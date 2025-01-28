@@ -1,13 +1,13 @@
 import './App.css'
 import CounterComponent from './presentation/components/CounterComponent'
-import { CounterProvider } from './presentation/contexts/CounterContext'
+import { ServiceProvider } from './presentation/contexts/ServiceContext'
 
 function App() {
 
   return (
-    <CounterProvider>
+    <ServiceProvider>
       <CounterComponent />
-    </CounterProvider>
+    </ServiceProvider>
   )
 }
 
