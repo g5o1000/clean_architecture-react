@@ -5,11 +5,11 @@ import { CounterRepositoryImpl } from "../../infrastructure/adapters/counter.imp
 
 const CounterContext = createContext<CounterService | null>(null);
 
-interface CounterProviderProps {
+interface ProviderProps {
     children: ReactNode;
 }
 
-export const CounterProvider: React.FC<CounterProviderProps> = ({ children }) => {
+export const CounterProvider: React.FC<ProviderProps> = ({ children }) => {
     const counterRepository: CounterRepository = new CounterRepositoryImpl();
     const counterService = new CounterService(counterRepository);
 
